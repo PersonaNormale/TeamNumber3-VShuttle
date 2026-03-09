@@ -1,50 +1,98 @@
 # V-Shuttle
 
-Backend Python per la logica di fusione dei sensori della navetta autonoma V-Shuttle.
+Demo full-stack per la simulazione decisionale della navetta autonoma **V-Shuttle**.
 
-Il problema è fondere tre letture potenzialmente discordanti dello stesso cartello stradale, normalizzare il testo OCR sporco, interpretare eventuali divieti, eccezioni e vincoli temporali, e produrre una decisione deterministica tra `STOP`, `GO` e `HUMAN_REVIEW`. La logica decisionale deve risiedere nel codice applicativo e non può dipendere da modelli esterni in runtime, come richiesto dalla traccia. fileciteturn1file0
+Il progetto è composto da:
+- **Backend** FastAPI (logica pipeline + API di simulazione)
+- **Frontend** React + Vite (dashboard per upload dataset e monitoraggio simulazione)
 
-## Struttura attuale
+## Architettura e integrazione frontend/backend
+
+### Porte di default
+- Backend: `http://127.0.0.1:8000`
+- Frontend (Vite dev server): `http://127.0.0.1:5173`
+
+### Come comunica il frontend con il backend
+Il frontend usa base URL relativa `\`/api\`` (`frontend/src/api/client.ts`).
+In sviluppo, Vite fa da proxy verso il backend:
+- `\`/api\`` → `http://127.0.0.1:8000`
+- `\`/health\`` → `http://127.0.0.1:8000`
+- `\`/decision\`` → `http://127.0.0.1:8000`
+
+In questo modo non servono URL hardcoded nel codice React e le chiamate restano coerenti con gli endpoint FastAPI.
+
+## Endpoint principali backend
+
+- `GET /health`
+- `POST /decision/evaluate`
+- `POST /api/datasets/load`
+- `POST /api/simulations/start`
+- `GET /api/simulations/{simulation_id}/state`
+- `POST /api/simulations/{simulation_id}/human-decision`
+
+## Avvio rapido (consigliato)
+
+Dalla root del repository:
+
+```bash
+make run
+```
+
+Questo comando esegue `run_fullstack.sh`, che:
+1. crea (se manca) il virtualenv backend in `backend/.venv`
+2. installa dipendenze backend (`backend/requirements.txt`)
+3. installa dipendenze frontend se `node_modules` manca
+4. avvia backend con uvicorn
+5. verifica `GET /health`
+6. avvia frontend Vite
+7. gestisce shutdown pulito di entrambi i processi con `Ctrl+C`
+
+## Variabili ambiente utili
+
+Puoi cambiare le porte senza modificare codice:
+
+```bash
+BACKEND_PORT=9000 FRONTEND_PORT=5174 make run
+```
+
+## Setup manuale (alternativa)
+
+### Backend
+```bash
+cd backend
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
+
+### Frontend (in un altro terminale)
+```bash
+cd frontend
+npm install
+npm run dev -- --host 0.0.0.0 --port 5173
+```
+
+## Altri target Makefile
+
+- `make install-backend` → prepara venv e installa dipendenze Python
+- `make install-frontend` → installa dipendenze Node del frontend
+
+## Struttura progetto (sintesi)
 
 ```text
 .
-├── README.md
-└── backend
-    ├── .gitignore
-    ├── requirements.txt
-    └── app
-        ├── __init__.py
-        ├── main.py
-        ├── models.py
-        └── pipeline.py
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── models.py
+│   │   └── pipeline.py
+│   └── requirements.txt
+├── frontend/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.ts
+├── run_fullstack.sh
+├── Makefile
+└── README.md
 ```
-
-## Scopo di questo primo step
-
-Questo scaffolding copre solo il backend del primo task:
-
-- caricamento scenari JSON
-- modellazione input dei sensori
-- punto di ingresso API/backend
-- modulo dedicato alla pipeline logica
-
-Il dataset contiene già casi che giustificano questa separazione minima: OCR sporco come `D1V1ET0`, `Z T L` e `R0T4T0R14`, sensori null, conflitti tra divieto ed eccezioni, regole con orari e giorni. fileciteturn1file1
-
-## Avvio
-
-```bash
-cd backend
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
-
-## Passo successivo
-
-Implementare dentro `pipeline.py` quattro funzioni pure:
-
-1. `normalize_text`
-2. `fuse_sensor_readings`
-3. `parse_sign`
-4. `decide_action`
