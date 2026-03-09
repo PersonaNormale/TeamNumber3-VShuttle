@@ -16,7 +16,10 @@ export function DatasetUploader({ onDatasetParsed, loading }: DatasetUploaderPro
     }
 
     const text = await file.text();
-    const parsed = JSON.parse(text) as DatasetLoadRequest;
+    const raw = JSON.parse(text) as unknown;
+    const parsed: DatasetLoadRequest = Array.isArray(raw)
+          ? { scenarios: raw }
+          : raw as DatasetLoadRequest;
     await onDatasetParsed(parsed);
 
     if (fileInputRef.current) {
