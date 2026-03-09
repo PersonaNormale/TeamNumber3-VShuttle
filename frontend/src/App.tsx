@@ -131,12 +131,10 @@ function App() {
           <button className="button start-button" onClick={() => void handleStartSimulation()} disabled={loading || !datasetId}>
             START SIMULATION
           </button>
-          <p className="hint">Avanzamento automatico ogni 4 secondi.</p>
+          <p className="hint">Simulatore continuo: avanzamento automatico ogni 4 secondi, pausa solo su conferma umana (2s).</p>
         </section>
 
         {error && <p className="error-banner">{error}</p>}
-
-        <ScenarioCard state={simulationState} />
 
         {simulationState && (
           <HumanDecisionPanel
@@ -145,6 +143,8 @@ function App() {
             loading={loading}
           />
         )}
+
+        <ScenarioCard state={simulationState} />
       </main>
     </div>
   );
