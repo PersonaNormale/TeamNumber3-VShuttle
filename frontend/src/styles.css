@@ -1,0 +1,163 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+main {
+  display: grid;
+  gap: 16px;
+}
+
+.header {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin: 4px 0 0;
+  color: #4b5563;
+}
+
+.header-status {
+  text-align: right;
+}
+
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.button {
+  background: #111827;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 12px;
+}
+
+.badge-go {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-stop {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-human {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.scenario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fused-text {
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.label {
+  display: block;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.action-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.progress-text {
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+.human-panel {
+  border: 2px solid #fbbf24;
+  background: #fffbeb;
+}
+
+.human-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.button.decision {
+  font-size: 1.05rem;
+  padding: 16px;
+}
+
+.button.confirm {
+  background: #166534;
+}
+
+.button.override {
+  background: #991b1b;
+}
+
+.error-banner {
+  background: #fee2e2;
+  color: #7f1d1d;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 0;
+}
