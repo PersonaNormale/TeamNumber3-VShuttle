@@ -10,7 +10,7 @@ from engine.decision import decide  # noqa: E402
 from engine.fusion import fuse_sensors  # noqa: E402
 from engine.sign_parser import parse_sign  # noqa: E402
 
-from app.models import DecisionOutput, ScenarioInput
+from .models import DecisionOutput, ScenarioInput
 
 
 def evaluate_scenario(scenario: ScenarioInput) -> DecisionOutput:

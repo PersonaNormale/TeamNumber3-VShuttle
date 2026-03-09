@@ -3,7 +3,7 @@ import time
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.models import (
+from .models import (
     DatasetLoadRequest,
     DatasetLoadResponse,
     DecisionOutput,
@@ -15,7 +15,7 @@ from app.models import (
     SimulationState,
     CurrentScenario,
 )
-from app.pipeline import evaluate_scenario
+from .pipeline import evaluate_scenario
 
 app = FastAPI(title="V-Shuttle Backend", version="0.1.0")
 
