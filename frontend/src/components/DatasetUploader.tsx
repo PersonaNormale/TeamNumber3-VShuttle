@@ -9,6 +9,25 @@ type DatasetUploaderProps = {
 export function DatasetUploader({ onDatasetParsed, loading }: DatasetUploaderProps) {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
+  const normalizeDataset = (raw: unknown): DatasetLoadRequest => {
+    if (Array.isArray(raw)) {
+      return { scenarios: raw as DatasetLoadRequest["scenarios"] };
+    }
+
+    if (
+      typeof raw === "object" &&
+      raw !== null &&
+      "scenarios" in raw &&
+      Array.isArray((raw as { scenarios: unknown }).scenarios)
+    ) {
+      return raw as DatasetLoadRequest;
+    }
+
+    throw new Error(
+      "Formato dataset non valido: usa un array di scenari o un oggetto con chiave 'scenarios'."
+    );
+  };
+
   const handleFileChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) {
@@ -16,7 +35,7 @@ export function DatasetUploader({ onDatasetParsed, loading }: DatasetUploaderPro
     }
 
     const text = await file.text();
-    const parsed = JSON.parse(text) as DatasetLoadRequest;
+    const parsed = normalizeDataset(JSON.parse(text));
     await onDatasetParsed(parsed);
 
     if (fileInputRef.current) {
@@ -27,7 +46,7 @@ export function DatasetUploader({ onDatasetParsed, loading }: DatasetUploaderPro
   return (
     <section className="panel">
       <h2>Upload Dataset</h2>
-      <p>Carica un file JSON con array scenarios.</p>
+      <p>Carica un file JSON con array scenari oppure con shape {'{ "scenarios": [...] }'}.</p>
       <input
         ref={fileInputRef}
         disabled={loading}

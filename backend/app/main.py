@@ -1,4 +1,5 @@
 import time
+from typing import Union
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -154,14 +155,17 @@ def decision_evaluate(payload: ScenarioInput) -> DecisionOutput:
 
 
 @app.post("/api/datasets/load", response_model=DatasetLoadResponse)
-def datasets_load(body: DatasetLoadRequest) -> DatasetLoadResponse:
+def datasets_load(body: Union[DatasetLoadRequest, list[ScenarioInput]]) -> DatasetLoadResponse:
     global _dataset_counter
+
+    scenarios = body.scenarios if isinstance(body, DatasetLoadRequest) else body
+
     _dataset_counter += 1
     dataset_id = f"ds_{_dataset_counter:03d}"
-    datasets[dataset_id] = body.scenarios
+    datasets[dataset_id] = scenarios
     return DatasetLoadResponse(
         datasetId=dataset_id,
-        scenarioCount=len(body.scenarios),
+        scenarioCount=len(scenarios),
     )
 
 
