@@ -10,6 +10,12 @@ const actionClassMap: Record<ScenarioAction, string> = {
   HUMAN_REVIEW: "badge badge-human"
 };
 
+const actionLabelMap: Record<ScenarioAction, string> = {
+  GO: "PROCEDI",
+  STOP: "FERMATI",
+  HUMAN_REVIEW: "ATTENZIONE"
+};
+
 export function StatusBadge({ action }: StatusBadgeProps) {
-  return <span className={actionClassMap[action]}>{action}</span>;
+  return <span className={actionClassMap[action]}>{actionLabelMap[action]}</span>;
 }

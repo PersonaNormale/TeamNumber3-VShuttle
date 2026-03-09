@@ -12,23 +12,15 @@ export function HumanDecisionPanel({ state, onDecision, loading }: HumanDecision
   }
 
   const countdownMs = state.currentScenario.countdownMsRemaining;
+  const secondsLeft = countdownMs !== null ? Math.max(0, countdownMs / 1000).toFixed(1) : "2.0";
 
   return (
     <section className="panel human-panel">
-      <h2>Intervento umano richiesto</h2>
-      <p>
-        Countdown backend: <strong>{countdownMs !== null ? `${countdownMs} ms` : "N/A"}</strong>
+      <h2>Conferma operatore richiesta</h2>
+      <p className="timer-text">
+        Tempo rimasto: <strong>{secondsLeft}s</strong>
       </p>
       <div className="human-actions">
-        <button
-          className="button decision confirm"
-          disabled={loading || !state.allowedActions.includes("CONFIRM")}
-          onClick={() => {
-            void onDecision("CONFIRM");
-          }}
-        >
-          CONFIRM
-        </button>
         <button
           className="button decision override"
           disabled={loading || !state.allowedActions.includes("OVERRIDE")}
@@ -37,6 +29,15 @@ export function HumanDecisionPanel({ state, onDecision, loading }: HumanDecision
           }}
         >
           OVERRIDE
+        </button>
+        <button
+          className="button decision confirm"
+          disabled={loading || !state.allowedActions.includes("CONFIRM")}
+          onClick={() => {
+            void onDecision("CONFIRM");
+          }}
+        >
+          CONFERMA
         </button>
       </div>
     </section>
