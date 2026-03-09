@@ -24,12 +24,18 @@ function App() {
 
   const parseError = (err: unknown): string => {
     if (err instanceof ApiError) {
-      return `Errore API (${err.status ?? "unknown"}): ${err.message}`;
+      if (err.status === 404) {
+        return "Risorsa non trovata. Ricarica il dataset e riprova.";
+      }
+      if (err.status === 409) {
+        return "Azione non disponibile in questo momento.";
+      }
+      return "Operazione non riuscita. Riprova.";
     }
     if (err instanceof Error) {
-      return err.message;
+      return "Qualcosa non ha funzionato. Riprova.";
     }
-    return "Errore non previsto";
+    return "Operazione non disponibile. Riprova.";
   };
 
   const handleDatasetParsed = async (dataset: DatasetLoadRequest) => {
@@ -119,12 +125,13 @@ function App() {
         <DatasetUploader onDatasetParsed={handleDatasetParsed} loading={loading} />
 
         <section className="panel controls">
-          <h2>Controlli simulazione</h2>
-          <p>Dataset ID: <strong>{datasetId ?? "non caricato"}</strong></p>
-          <p>Scenari totali: <strong>{scenarioCount || "-"}</strong></p>
-          <button className="button" onClick={() => void handleStartSimulation()} disabled={loading || !datasetId}>
+          <h2>Simulazione live</h2>
+          <p>Dataset pronto: <strong>{datasetId ? "Sì" : "No"}</strong></p>
+          <p>Scenari caricati: <strong>{scenarioCount || "-"}</strong></p>
+          <button className="button start-button" onClick={() => void handleStartSimulation()} disabled={loading || !datasetId}>
             START SIMULATION
           </button>
+          <p className="hint">Avanzamento automatico ogni 4 secondi.</p>
         </section>
 
         {error && <p className="error-banner">{error}</p>}
