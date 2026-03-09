@@ -232,6 +232,21 @@ def simulations_state(simulation_id: str) -> SimulationState:
     return _build_state(simulation_id, sim)
 
 
+
+
+@app.post("/api/simulations/{simulation_id}/stop", response_model=SimulationState)
+def simulations_stop(simulation_id: str) -> SimulationState:
+    if simulation_id not in simulations:
+        raise HTTPException(status_code=404, detail="Simulation not found")
+
+    sim = simulations[simulation_id]
+    sim["current_index"] = len(sim["items"])
+    sim["status"] = "COMPLETED"
+    sim["waiting_human_since"] = None
+    sim["last_advance_time"] = time.time()
+
+    return _build_state(simulation_id, sim)
+
 @app.post(
     "/api/simulations/{simulation_id}/human-decision",
     response_model=HumanDecisionResponse,
