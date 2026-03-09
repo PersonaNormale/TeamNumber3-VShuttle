@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  color: #1f2937;
-  background: #f3f4f6;
+  color: #0f172a;
+  background: #e5e7eb;
 }
 
 * {
@@ -13,9 +13,9 @@ body {
 }
 
 .app {
-  max-width: 960px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 20px;
 }
 
 main {
@@ -25,8 +25,8 @@ main {
 
 .header {
   background: white;
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 16px;
+  padding: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +39,7 @@ main {
 
 .header p {
   margin: 4px 0 0;
-  color: #4b5563;
+  color: #475569;
 }
 
 .header-status {
@@ -48,8 +48,14 @@ main {
 
 .panel {
   background: white;
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.controls .hint {
+  margin-top: 10px;
+  color: #475569;
+  font-weight: 600;
 }
 
 .button {
@@ -58,8 +64,16 @@ main {
   border: none;
   padding: 12px 18px;
   border-radius: 10px;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
+}
+
+.start-button {
+  margin-top: 8px;
+  width: 100%;
+  min-height: 64px;
+  font-size: 1.2rem;
+  background: #0f766e;
 }
 
 .button:disabled {
@@ -72,9 +86,9 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 8px 14px;
 }
 
 .badge-go {
@@ -92,57 +106,118 @@ main {
   color: #854d0e;
 }
 
+.scenario-card {
+  border: 3px solid transparent;
+}
+
+.tone-green {
+  border-color: #16a34a;
+}
+
+.tone-red {
+  border-color: #dc2626;
+}
+
+.tone-yellow {
+  border-color: #f59e0b;
+}
+
 .scenario-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.fused-title {
+  margin-bottom: 6px;
+  color: #334155;
+  font-weight: 700;
+}
+
 .fused-text {
+  margin-top: 0;
   background: #f8fafc;
   border-left: 4px solid #94a3b8;
   padding: 12px;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .scenario-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
 }
 
 .label {
   display: block;
-  color: #6b7280;
+  color: #475569;
   font-size: 0.9rem;
 }
 
 .action-text {
-  font-size: 1.4rem;
-  font-weight: 800;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 6px 0 0;
+}
+
+.confidence-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.confidence-track {
+  height: 18px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.confidence-fill.is-high {
+  background: #16a34a;
+}
+
+.confidence-fill.is-medium {
+  background: #f59e0b;
+}
+
+.confidence-fill.is-low {
+  background: #dc2626;
 }
 
 .progress-text {
   margin-top: 14px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .human-panel {
-  border: 2px solid #fbbf24;
+  border: 3px solid #f59e0b;
   background: #fffbeb;
+}
+
+.timer-text {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .human-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 14px;
   margin-top: 10px;
 }
 
 .button.decision {
-  font-size: 1.05rem;
-  padding: 16px;
+  font-size: 1.4rem;
+  padding: 22px;
+  min-height: 92px;
 }
 
 .button.confirm {
@@ -150,14 +225,15 @@ main {
 }
 
 .button.override {
-  background: #991b1b;
+  background: #b91c1c;
 }
 
 .error-banner {
-  background: #fee2e2;
-  color: #7f1d1d;
+  background: #fef2f2;
+  color: #991b1b;
   border: 1px solid #fecaca;
   border-radius: 10px;
   padding: 12px;
   margin: 0;
+  font-weight: 700;
 }

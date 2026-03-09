@@ -18,8 +18,8 @@ export function DatasetUploader({ onDatasetParsed, loading }: DatasetUploaderPro
     const text = await file.text();
     const raw = JSON.parse(text) as unknown;
     const parsed: DatasetLoadRequest = Array.isArray(raw)
-          ? { scenarios: raw }
-          : raw as DatasetLoadRequest;
+      ? { scenarios: raw }
+      : raw as DatasetLoadRequest;
     await onDatasetParsed(parsed);
 
     if (fileInputRef.current) {
@@ -29,8 +29,8 @@ export function DatasetUploader({ onDatasetParsed, loading }: DatasetUploaderPro
 
   return (
     <section className="panel">
-      <h2>Upload Dataset</h2>
-      <p>Carica un file JSON con array scenarios.</p>
+      <h2>Caricamento scenari</h2>
+      <p>Seleziona il file JSON degli scenari da simulare.</p>
       <input
         ref={fileInputRef}
         disabled={loading}

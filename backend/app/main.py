@@ -93,6 +93,23 @@ def _try_advance(sim: dict, now: float) -> None:
     _set_status_for_current(sim, now)
 
 
+def _apply_safety_stop_and_advance(sim: dict, now: float) -> None:
+    """When human confirmation times out, force a safe STOP before advancing."""
+    idx = sim["current_index"]
+    if idx < len(sim["items"]):
+        scenario_id, dec = sim["items"][idx]
+        sim["items"][idx] = (
+            scenario_id,
+            dec.model_copy(
+                update={
+                    "action": "STOP",
+                    "reason": "Tempo scaduto: frenata automatica di sicurezza",
+                }
+            ),
+        )
+    _try_advance(sim, now)
+
+
 def _build_state(sim_id: str, sim: dict) -> SimulationState:
     items = sim["items"]
     total = len(items)
@@ -210,7 +227,7 @@ def simulations_state(simulation_id: str) -> SimulationState:
         elapsed = now - sim["waiting_human_since"]
         if elapsed >= HUMAN_TIMEOUT_MS / 1000:
             # Timeout: apply automatic STOP and advance
-            _try_advance(sim, now)
+            _apply_safety_stop_and_advance(sim, now)
 
     return _build_state(simulation_id, sim)
 
