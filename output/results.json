@@ -1,0 +1,1231 @@
+[
+  {
+    "id_scenario": 70,
+    "action": "STOP",
+    "confidence": 1.0,
+    "fused_text": "ZTL",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Zona a Traffico Limitato attiva",
+    "orario_rilevamento": "09:25",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL",
+      "camera_laterale": "ZTL",
+      "V2I_receiver": "ZTL"
+    }
+  },
+  {
+    "id_scenario": 101,
+    "action": "ASK_HUMAN",
+    "confidence": 0.227,
+    "fused_text": "DIVIETO TRANSITO NAVETTE L4",
+    "sign_type": "DIVIETO",
+    "exceptions": [
+      "NAVETTE_L4"
+    ],
+    "reason": "Lettura poco affidabile — conferma operatore necessaria",
+    "orario_rilevamento": "08:45",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO TRANSITO NAVETTE L4",
+      "camera_laterale": "DIVIETO ECCETTO NAVETTE",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 57,
+    "action": "STOP",
+    "confidence": 0.979,
+    "fused_text": "ECCETTO MEZZI DI SOCCORSO",
+    "sign_type": "ECCETTO_STANDALONE",
+    "exceptions": [
+      "SOCCORSO"
+    ],
+    "reason": "Divieto con eccezione non applicabile alla navetta",
+    "orario_rilevamento": "12:45",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "ECCETTO MEZZI DI SOCCORSO",
+      "camera_laterale": "ECCETTO SOCCORSO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 91,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "PIAZZA DEL DUOMO",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "14:10",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "PIAZZA DEL DUOMO",
+      "camera_laterale": "PIAZZA DEL DUOMO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 40,
+    "action": "STOP",
+    "confidence": 0.936,
+    "fused_text": "ECCETTO FORNITORE DALLE 08:00 ALLE 10:00",
+    "sign_type": "ECCETTO_STANDALONE",
+    "exceptions": [
+      "FORNITORE"
+    ],
+    "reason": "Divieto con eccezione non applicabile alla navetta",
+    "orario_rilevamento": "09:30",
+    "giorno_settimana": "Sabato",
+    "sensori_raw": {
+      "camera_frontale": "ECCETTO FORNITORE DALLE 08:00 ALLE 10:00",
+      "camera_laterale": "ECCETTO FORNITORE 08-10",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 3,
+    "action": "STOP",
+    "confidence": 0.85,
+    "fused_text": "ZTL ATTIVA 08:00 - 20:00",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Zona a Traffico Limitato attiva",
+    "orario_rilevamento": "10:00",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL ATTIVA 08:00 - 20:00",
+      "camera_laterale": "ZTL ATTIVA 8:00 20:00",
+      "V2I_receiver": "ZTL 08-20"
+    }
+  },
+  {
+    "id_scenario": 10,
+    "action": "GO",
+    "confidence": 0.319,
+    "fused_text": "DIVIETO DI TRANSITO ECCETTO BUS",
+    "sign_type": "DIVIETO",
+    "exceptions": [
+      "BUS"
+    ],
+    "reason": "Eccezione per BUS — la navetta può transitare",
+    "orario_rilevamento": "09:45",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI TRANSITO ECCETTO BUS",
+      "camera_laterale": "DIVIETO TRANSITO ECCETTO BUS",
+      "V2I_receiver": "DIVIETO TRANSITO BUS"
+    }
+  },
+  {
+    "id_scenario": 49,
+    "action": "GO",
+    "confidence": 0.894,
+    "fused_text": "DIVIETO DI TRANSITO ECCETTO NAVETTE L4",
+    "sign_type": "DIVIETO",
+    "exceptions": [
+      "NAVETTE_L4"
+    ],
+    "reason": "Eccezione per NAVETTE_L4 — la navetta può transitare",
+    "orario_rilevamento": "10:15",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI TRANSITO ECCETTO NAVETTE L4",
+      "camera_laterale": "DIVIETO TRANSITO ECCETTO NAVETTE L4",
+      "V2I_receiver": "TRANSITO L4 OK"
+    }
+  },
+  {
+    "id_scenario": 31,
+    "action": "GO",
+    "confidence": 0.979,
+    "fused_text": "DIVIETO DI SOSTA 0-24 RIMOZIONE FORZATA",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto di sosta — non riguarda il transito",
+    "orario_rilevamento": "11:10",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI SOSTA 0-24 RIMOZIONE FORZATA",
+      "camera_laterale": "DIVIETO SOSTA 0-24",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 61,
+    "action": "STOP",
+    "confidence": 0.968,
+    "fused_text": "MERCATO RIONALE VENERDI 06:00-14:00",
+    "sign_type": "MERCATO",
+    "exceptions": [],
+    "reason": "Mercato rionale attivo — strada bloccata",
+    "orario_rilevamento": "10:30",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "MERCATO RIONALE VENERDI 06:00-14:00",
+      "camera_laterale": "MERCATO VENERDI 06-14",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 93,
+    "action": "STOP",
+    "confidence": 0.916,
+    "fused_text": "ZTL ATTIVA 0-24",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Zona a Traffico Limitato attiva",
+    "orario_rilevamento": "03:15",
+    "giorno_settimana": "Domenica",
+    "sensori_raw": {
+      "camera_frontale": "ZTL ATTIVA 0-24",
+      "camera_laterale": "ZTL 0-24",
+      "V2I_receiver": "ZTL SEMPRE"
+    }
+  },
+  {
+    "id_scenario": 69,
+    "action": "GO",
+    "confidence": 0.98,
+    "fused_text": "ECCETTO VEICOLI ELETTRICI",
+    "sign_type": "ECCETTO_STANDALONE",
+    "exceptions": [
+      "ELETTRICI"
+    ],
+    "reason": "Eccezione per veicoli elettrici — la navetta può transitare",
+    "orario_rilevamento": "09:20",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "ECCETTO VEICOLI ELETTRICI",
+      "camera_laterale": "ECCETTO ELETTRICI",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 62,
+    "action": "GO",
+    "confidence": 0.983,
+    "fused_text": "MERCATO RIONALE VENERDI 06:00-14:00",
+    "sign_type": "MERCATO",
+    "exceptions": [],
+    "reason": "Mercato fuori orario (attivo 06:00-14:00)",
+    "orario_rilevamento": "15:00",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "MERCATO RIONALE VENERDI 06:00-14:00",
+      "camera_laterale": "MERCATO VENERDI 06-14",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 33,
+    "action": "GO",
+    "confidence": 0.928,
+    "fused_text": "OBBLIGO SVOLTA DESTRA",
+    "sign_type": "OBBLIGO",
+    "exceptions": [],
+    "reason": "Obbligo di navigazione — seguire indicazione",
+    "orario_rilevamento": "10:55",
+    "giorno_settimana": "Sabato",
+    "sensori_raw": {
+      "camera_frontale": "OBBLIGO DI SVOLTA A DESTRA",
+      "camera_laterale": "OBBLIGO SVOLTA DESTRA",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 25,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "DIVIETO DI TRANSITO MEZZI PESANTI",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto per mezzi pesanti — la navetta non è un mezzo pesante",
+    "orario_rilevamento": "13:15",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI TRANSITO MEZZI PESANTI",
+      "camera_laterale": "DIVIETO MEZZI PESANTI",
+      "V2I_receiver": "NO MEZZI PESANTI"
+    }
+  },
+  {
+    "id_scenario": 50,
+    "action": "STOP",
+    "confidence": 1.0,
+    "fused_text": "DIVIETO",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto — nessuna eccezione applicabile",
+    "orario_rilevamento": "13:45",
+    "giorno_settimana": "Martedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO",
+      "camera_laterale": "DIVIETO",
+      "V2I_receiver": "DIVIETO"
+    }
+  },
+  {
+    "id_scenario": 13,
+    "action": "GO",
+    "confidence": 0.934,
+    "fused_text": "ATTENZIONE PEDONI",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "13:20",
+    "giorno_settimana": "Domenica",
+    "sensori_raw": {
+      "camera_frontale": "ATTENZIONE PEDONI",
+      "camera_laterale": "ATTENZIONE PEDONI",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 46,
+    "action": "GO",
+    "confidence": 0.798,
+    "fused_text": "ZTL ATTIVA DALLE 20",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Fuori dall'orario di validità (20:00-24:00)",
+    "orario_rilevamento": "14:40",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL ATTIVA DALLE 20",
+      "camera_laterale": "ZTL ATTIVA 20",
+      "V2I_receiver": "ZTL 20:00"
+    }
+  },
+  {
+    "id_scenario": 30,
+    "action": "STOP",
+    "confidence": 0.842,
+    "fused_text": "DIVIETO DI TRANSITO",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto di transito — nessuna eccezione applicabile",
+    "orario_rilevamento": "09:35",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "D I V I E T O   D I   T R A N S I T O",
+      "camera_laterale": "DIVIETO DI TRANSITO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 22,
+    "action": "GO",
+    "confidence": 0.871,
+    "fused_text": "ZTL NOTTURNA 23:00-05:00",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Fuori dall'orario di validità (23:00-05:00)",
+    "orario_rilevamento": "16:00",
+    "giorno_settimana": "Martedì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL NOTTURNA 23:00-05:00",
+      "camera_laterale": "ZTL NOTTURNA 23:00-05:00",
+      "V2I_receiver": "ZTL 23-05"
+    }
+  },
+  {
+    "id_scenario": 99,
+    "action": "ASK_HUMAN",
+    "confidence": 0.308,
+    "fused_text": "DIVIETO ACCESSO",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Lettura poco affidabile — conferma operatore necessaria",
+    "orario_rilevamento": "14:50",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO ACCESSO",
+      "camera_laterale": "DIVIETO ECCETTO BUS",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 16,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "ZTL VARCO NON ATTIVO",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Varco ZTL non attivo — transito consentito",
+    "orario_rilevamento": "22:45",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL VARCO NON ATTIVO",
+      "camera_laterale": "ZTL VARCO NON ATTIVO",
+      "V2I_receiver": "VARCO INATTIVO"
+    }
+  },
+  {
+    "id_scenario": 44,
+    "action": "ASK_HUMAN",
+    "confidence": 0.53,
+    "fused_text": "DIVIETO DI ACCESSO MEZZI NON AUTORIZZATI",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto per mezzi non autorizzati — verifica autorizzazione",
+    "orario_rilevamento": "15:10",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI ACCESSO MEZZI NON AUTORIZZATI",
+      "camera_laterale": "DIVIETO MEZZI NON AUTORIZZATI",
+      "V2I_receiver": "NO NON AUTORIZZATI"
+    }
+  },
+  {
+    "id_scenario": 79,
+    "action": "STOP",
+    "confidence": 0.557,
+    "fused_text": "DIVIETO D1 ACCESSO",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto — nessuna eccezione applicabile",
+    "orario_rilevamento": "16:40",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "D1V1ET0 D1 ACCE550",
+      "camera_laterale": "DIVIETO DI ACCESSO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 17,
+    "action": "STOP",
+    "confidence": 0.974,
+    "fused_text": "ECCETTO RESIDENTI",
+    "sign_type": "ECCETTO_STANDALONE",
+    "exceptions": [
+      "RESIDENTI"
+    ],
+    "reason": "Divieto con eccezione non applicabile alla navetta",
+    "orario_rilevamento": "16:20",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "ECCETTO RESIDENTI",
+      "camera_laterale": "ECCETTO RESIDENTI",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 48,
+    "action": "GO",
+    "confidence": 0.565,
+    "fused_text": "ROTATORIA",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "17:20",
+    "giorno_settimana": "Domenica",
+    "sensori_raw": {
+      "camera_frontale": "R0T4T0R14",
+      "camera_laterale": "ROTATORIA",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 42,
+    "action": "GO",
+    "confidence": 0.725,
+    "fused_text": "LAVORI CORSO IOOM",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "11:35",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "LAVORI IN CORSO A 100M",
+      "camera_laterale": "LAVORI A 100M",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 28,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "DOSSO ARTIFICIALE",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "08:45",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "DOSSO ARTIFICIALE",
+      "camera_laterale": "DOSSO ARTIFICIALE",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 55,
+    "action": "STOP",
+    "confidence": 0.619,
+    "fused_text": "DIVIETO DI ACCESSO DAL LUNEDI VENERDI",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto di accesso — nessuna eccezione applicabile",
+    "orario_rilevamento": "09:00",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI ACCESSO DAL LUNEDI AL VENERDI",
+      "camera_laterale": "DIVIETO LUN-VEN",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 83,
+    "action": "GO",
+    "confidence": 0.996,
+    "fused_text": "PARCHEGGIO A PAGAMENTO",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "09:50",
+    "giorno_settimana": "Sabato",
+    "sensori_raw": {
+      "camera_frontale": "PARCHEGGIO A PAGAMENTO",
+      "camera_laterale": "PARCHEGGIO PAGAMENTO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 71,
+    "action": "STOP",
+    "confidence": 0.914,
+    "fused_text": "ZTL",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Zona a Traffico Limitato attiva",
+    "orario_rilevamento": "22:50",
+    "giorno_settimana": "Domenica",
+    "sensori_raw": {
+      "camera_frontale": "Z T L",
+      "camera_laterale": "ZTL",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 2,
+    "action": "GO",
+    "confidence": 0.99,
+    "fused_text": "DIVIETO DI ACCESSO ECCETTO BUS",
+    "sign_type": "DIVIETO",
+    "exceptions": [
+      "BUS"
+    ],
+    "reason": "Eccezione per BUS — la navetta può transitare",
+    "orario_rilevamento": "08:30",
+    "giorno_settimana": "Martedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI ACCESSO ECCETTO BUS",
+      "camera_laterale": "DIVIETO ACCESSO ECCETTO BUS",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 59,
+    "action": "GO",
+    "confidence": 0.368,
+    "fused_text": "SENSO UNICO ALTERNATO",
+    "sign_type": "SENSO_UNICO",
+    "exceptions": [],
+    "reason": "Senso unico — proseguire nella direzione consentita",
+    "orario_rilevamento": "18:15",
+    "giorno_settimana": "Sabato",
+    "sensori_raw": {
+      "camera_frontale": "S3NS0 UN1C0 4LT3RN4T0",
+      "camera_laterale": "SENSO UNICO ALTERNATO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 26,
+    "action": "GO",
+    "confidence": 0.978,
+    "fused_text": "PASSAGGIO A LIVELLO",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "15:55",
+    "giorno_settimana": "Sabato",
+    "sensori_raw": {
+      "camera_frontale": "PASSAGGIO A LIVELLO",
+      "camera_laterale": "PASSAGGIO A LIVELLO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 68,
+    "action": "GO",
+    "confidence": 0.621,
+    "fused_text": "ACCESSO ELETTRICI",
+    "sign_type": "ACCESSO_CONSENTITO",
+    "exceptions": [
+      "ELETTRICI"
+    ],
+    "reason": "Accesso esplicitamente consentito",
+    "orario_rilevamento": "12:35",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "ACCESSO CONSENTITO AI VEICOLI ELETTRICI",
+      "camera_laterale": "ACCESSO ELETTRICI",
+      "V2I_receiver": "OK ELETTRICI"
+    }
+  },
+  {
+    "id_scenario": 38,
+    "action": "GO",
+    "confidence": 0.686,
+    "fused_text": "ZONA 30",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "20:25",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "Z0N4 30",
+      "camera_laterale": "ZONA 30",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 39,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "DIVIETO DI FERMATA",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto di fermata — non riguarda il transito",
+    "orario_rilevamento": "09:05",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI FERMATA",
+      "camera_laterale": "DIVIETO FERMATA",
+      "V2I_receiver": "NO FERMATA"
+    }
+  },
+  {
+    "id_scenario": 82,
+    "action": "GO",
+    "confidence": 0.358,
+    "fused_text": "STAZIONE FERROVIARIA",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "19:10",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "5T4Z10N3 F3RR0V14R14",
+      "camera_laterale": "STAZIONE FERROVIARIA",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 100,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "LAVORI",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "15:50",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "LAVORI",
+      "camera_laterale": "LAVORI",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 85,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "CENTRO STORICO",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "09:40",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "CENTRO STORICO",
+      "camera_laterale": "CENTRO STORICO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 32,
+    "action": "GO",
+    "confidence": 0.974,
+    "fused_text": "ATTENZIONE BAMBINI SCUOLA",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "08:15",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "ATTENZIONE BAMBINI SCUOLA",
+      "camera_laterale": "ATTENZIONE BAMBINI",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 54,
+    "action": "GO",
+    "confidence": 0.992,
+    "fused_text": "ZTL VARCO NON ATTIVO",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Varco ZTL non attivo — transito consentito",
+    "orario_rilevamento": "16:30",
+    "giorno_settimana": "Sabato",
+    "sensori_raw": {
+      "camera_frontale": "ZTL V.A.R.C.O. NON ATTIVO",
+      "camera_laterale": "ZTL VARCO NON ATTIVO",
+      "V2I_receiver": "VARCO INATTIVO"
+    }
+  },
+  {
+    "id_scenario": 5,
+    "action": "GO",
+    "confidence": 0.925,
+    "fused_text": "LAVORI CORSO",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "14:30",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "LAVORI IN CORSO",
+      "camera_laterale": "LAVORI IN CORSO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 24,
+    "action": "STOP",
+    "confidence": 0.547,
+    "fused_text": "AREA PEDONALE",
+    "sign_type": "AREA_PEDONALE",
+    "exceptions": [],
+    "reason": "Area pedonale — transito vietato ai veicoli",
+    "orario_rilevamento": "21:10",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "4R3A P3D0NAL3",
+      "camera_laterale": "AREA PEDONALE",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 96,
+    "action": "STOP",
+    "confidence": 0.94,
+    "fused_text": "ZTL SPERIMENTALE",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Zona a Traffico Limitato attiva",
+    "orario_rilevamento": "15:20",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL SPERIMENTALE",
+      "camera_laterale": "ZTL SPERIMENTALE",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 97,
+    "action": "STOP",
+    "confidence": 0.679,
+    "fused_text": "ZTL ATTIVA 18:00-24:00",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Zona a Traffico Limitato attiva",
+    "orario_rilevamento": "19:30",
+    "giorno_settimana": "Sabato",
+    "sensori_raw": {
+      "camera_frontale": "ZTL ATTIVA 18:00-24:00",
+      "camera_laterale": "ZTL 18-24",
+      "V2I_receiver": "ZTL SERA"
+    }
+  },
+  {
+    "id_scenario": 103,
+    "action": "GO",
+    "confidence": 0.939,
+    "fused_text": "ZTL ATTIVA ECCETTO NAVETTE L4",
+    "sign_type": "ZTL",
+    "exceptions": [
+      "NAVETTE_L4"
+    ],
+    "reason": "Eccezione per NAVETTE_L4 — la navetta può transitare",
+    "orario_rilevamento": "14:20",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL ATTIVA ECCETTO NAVETTE L4",
+      "camera_laterale": "ZTL NAVETTE L4 OK",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 90,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "TUTTE LE DIREZIONI",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "11:25",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "TUTTE LE DIREZIONI",
+      "camera_laterale": "TUTTE LE DIREZIONI",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 45,
+    "action": "STOP",
+    "confidence": 0.83,
+    "fused_text": "ZTL ATTIVA DALLE 20",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Zona a Traffico Limitato attiva",
+    "orario_rilevamento": "21:05",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL ATTIVA DALLE 20",
+      "camera_laterale": "ZTL ATTIVA DALLE 20",
+      "V2I_receiver": "ZTL 20:00"
+    }
+  },
+  {
+    "id_scenario": 53,
+    "action": "STOP",
+    "confidence": 0.982,
+    "fused_text": "ZTL VARCO ATTIVO",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Varco ZTL attivo — fermata obbligatoria",
+    "orario_rilevamento": "11:20",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL V.A.R.C.O. ATTIVO",
+      "camera_laterale": "ZTL VARCO ATTIVO",
+      "V2I_receiver": "VARCO ATTIVO"
+    }
+  },
+  {
+    "id_scenario": 78,
+    "action": "GO",
+    "confidence": 0.644,
+    "fused_text": "ZTL ATTIVA 22:00 - 06:00",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Fuori dall'orario di validità (22:00-06:00)",
+    "orario_rilevamento": "10:00",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL ATTIVA 22:00 - 06:00",
+      "camera_laterale": "ZTL 22-06",
+      "V2I_receiver": "ZTL NOTTE"
+    }
+  },
+  {
+    "id_scenario": 76,
+    "action": "GO",
+    "confidence": 0.789,
+    "fused_text": "DIVIETO DI TRANSITO PER VEICOLI MOTORE",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto per veicoli a motore — la navetta è elettrica",
+    "orario_rilevamento": "11:30",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI TRANSITO PER VEICOLI A MOTORE",
+      "camera_laterale": "DIVIETO VEICOLI MOTORE",
+      "V2I_receiver": "NO MOTORE"
+    }
+  },
+  {
+    "id_scenario": 4,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "ZTL ATTIVA 08:00 - 20:00",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Fuori dall'orario di validità (08:00-20:00)",
+    "orario_rilevamento": "21:30",
+    "giorno_settimana": "Giovedì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL ATTIVA 08:00 - 20:00",
+      "camera_laterale": "ZTL ATTIVA 08:00 - 20:00",
+      "V2I_receiver": "ZTL ATTIVA 08:00 - 20:00"
+    }
+  },
+  {
+    "id_scenario": 88,
+    "action": "STOP",
+    "confidence": 0.969,
+    "fused_text": "ZTL SOLO GIORNI FESTIVI",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Zona a Traffico Limitato attiva",
+    "orario_rilevamento": "10:00",
+    "giorno_settimana": "Domenica",
+    "sensori_raw": {
+      "camera_frontale": "ZTL SOLO GIORNI FESTIVI",
+      "camera_laterale": "ZTL FESTIVI",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 66,
+    "action": "GO",
+    "confidence": 0.931,
+    "fused_text": "FINE ZTL",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Fine zona ZTL — proseguire",
+    "orario_rilevamento": "14:25",
+    "giorno_settimana": "Domenica",
+    "sensori_raw": {
+      "camera_frontale": "FINE ZTL",
+      "camera_laterale": "FINE ZTL",
+      "V2I_receiver": "USCITA ZTL"
+    }
+  },
+  {
+    "id_scenario": 104,
+    "action": "GO",
+    "confidence": 0.815,
+    "fused_text": "NAVETTE L4 NOTTE",
+    "sign_type": "INFO_NAVETTE",
+    "exceptions": [
+      "NAVETTE_L4"
+    ],
+    "reason": "Informazione servizio navette — proseguire",
+    "orario_rilevamento": "23:45",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "NAVETTE L4 NOTTE",
+      "camera_laterale": "NAVETTE L4 22-05",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 81,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "STAZIONE FERROVIARIA",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "13:40",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "STAZIONE FERROVIARIA",
+      "camera_laterale": "STAZIONE FERROVIARIA",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 18,
+    "action": "GO",
+    "confidence": 0.603,
+    "fused_text": "LIMITE KM/H",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "11:45",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "LIMITE MASSIMO 30 KM/H",
+      "camera_laterale": "LIMITE 30 KM/H",
+      "V2I_receiver": "LIMIT 30"
+    }
+  },
+  {
+    "id_scenario": 58,
+    "action": "GO",
+    "confidence": 0.967,
+    "fused_text": "SENSO UNICO ALTERNATO",
+    "sign_type": "SENSO_UNICO",
+    "exceptions": [],
+    "reason": "Senso unico — proseguire nella direzione consentita",
+    "orario_rilevamento": "08:05",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "SENSO UNICO ALTERNATO",
+      "camera_laterale": "SENSO UNICO ALTERNATO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 84,
+    "action": "GO",
+    "confidence": 0.896,
+    "fused_text": "DIVIETO DI AFFISSIONE",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto di affissione — non riguarda il transito",
+    "orario_rilevamento": "14:15",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI AFFISSIONE",
+      "camera_laterale": "DIVIETO AFFISSIONE",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 23,
+    "action": "STOP",
+    "confidence": 1.0,
+    "fused_text": "AREA PEDONALE",
+    "sign_type": "AREA_PEDONALE",
+    "exceptions": [],
+    "reason": "Area pedonale — transito vietato ai veicoli",
+    "orario_rilevamento": "18:00",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "AREA PEDONALE",
+      "camera_laterale": "AREA PEDONALE",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 11,
+    "action": "STOP",
+    "confidence": 1.0,
+    "fused_text": "SENSO VIETATO",
+    "sign_type": "SENSO_VIETATO",
+    "exceptions": [],
+    "reason": "Senso vietato — fermata obbligatoria",
+    "orario_rilevamento": "12:10",
+    "giorno_settimana": "Venerdì",
+    "sensori_raw": {
+      "camera_frontale": "SENSO VIETATO",
+      "camera_laterale": "SENSO VIETATO",
+      "V2I_receiver": "SENSO VIETATO"
+    }
+  },
+  {
+    "id_scenario": 1,
+    "action": "STOP",
+    "confidence": 1.0,
+    "fused_text": "DIVIETO DI ACCESSO",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto di accesso — nessuna eccezione applicabile",
+    "orario_rilevamento": "09:15",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI ACCESSO",
+      "camera_laterale": "DIVIETO DI ACCESSO",
+      "V2I_receiver": "DIVIETO ACCESSO"
+    }
+  },
+  {
+    "id_scenario": 14,
+    "action": "GO",
+    "confidence": 0.971,
+    "fused_text": "STRADA SENZA USCITA",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "17:40",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "STRADA SENZA USCITA",
+      "camera_laterale": "STRADA SENZA USCITA",
+      "V2I_receiver": "STRADA CHIUSA"
+    }
+  },
+  {
+    "id_scenario": 94,
+    "action": "STOP",
+    "confidence": 0.728,
+    "fused_text": "DIVIETO DI ACCESSO",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto di accesso — nessuna eccezione applicabile",
+    "orario_rilevamento": "08:40",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "D I V  E T O  D I  A C C S S O",
+      "camera_laterale": "DIVIETO DI ACCESSO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 29,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "RALLENTARE",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "14:05",
+    "giorno_settimana": "Martedì",
+    "sensori_raw": {
+      "camera_frontale": "RALLENTARE",
+      "camera_laterale": "RALLENTARE",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 72,
+    "action": "GO",
+    "confidence": 0.979,
+    "fused_text": "DIVIETO DI SCARICO RIFIUTI",
+    "sign_type": "DIVIETO",
+    "exceptions": [],
+    "reason": "Divieto di scarico — non riguarda il transito",
+    "orario_rilevamento": "16:45",
+    "giorno_settimana": "Sabato",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI SCARICO RIFIUTI",
+      "camera_laterale": "DIVIETO SCARICO",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 89,
+    "action": "GO",
+    "confidence": 0.98,
+    "fused_text": "ZTL SOLO GIORNI FESTIVI",
+    "sign_type": "ZTL",
+    "exceptions": [],
+    "reason": "Vincolo non attivo oggi (Martedì)",
+    "orario_rilevamento": "14:20",
+    "giorno_settimana": "Martedì",
+    "sensori_raw": {
+      "camera_frontale": "ZTL SOLO GIORNI FESTIVI",
+      "camera_laterale": "ZTL FESTIVI",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 63,
+    "action": "GO",
+    "confidence": 0.957,
+    "fused_text": "MERCATO RIONALE VENERDI 06:00-14:00",
+    "sign_type": "MERCATO",
+    "exceptions": [],
+    "reason": "Mercato non attivo oggi (Martedì)",
+    "orario_rilevamento": "10:30",
+    "giorno_settimana": "Martedì",
+    "sensori_raw": {
+      "camera_frontale": "MERCATO RIONALE VENERDI 06:00-14:00",
+      "camera_laterale": "MERCATO VENERDI 06-14",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 95,
+    "action": "GO",
+    "confidence": 0.852,
+    "fused_text": "STRADA DISSESTATA LIMITE KM/H",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "16:05",
+    "giorno_settimana": "Martedì",
+    "sensori_raw": {
+      "camera_frontale": "STRADA SDISSESTATA LIMITE 10 KM/H",
+      "camera_laterale": "STRADA DISSESTATA 10",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 37,
+    "action": "GO",
+    "confidence": 1.0,
+    "fused_text": "ZONA 30",
+    "sign_type": "INFO",
+    "exceptions": [],
+    "reason": "Segnale informativo — nessun divieto di transito",
+    "orario_rilevamento": "16:15",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "ZONA 30",
+      "camera_laterale": "ZONA 30",
+      "V2I_receiver": "ZONA 30"
+    }
+  },
+  {
+    "id_scenario": 105,
+    "action": "ASK_HUMAN",
+    "confidence": 0.0,
+    "fused_text": "",
+    "sign_type": "SCONOSCIUTO",
+    "exceptions": [],
+    "reason": "Nessun sensore disponibile — richiesta conferma operatore",
+    "orario_rilevamento": "10:15",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": null,
+      "camera_laterale": null,
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 41,
+    "action": "STOP",
+    "confidence": 0.952,
+    "fused_text": "ECCETTO FORNITORE DALLE 08:00 ALLE 10:00",
+    "sign_type": "ECCETTO_STANDALONE",
+    "exceptions": [
+      "FORNITORE"
+    ],
+    "reason": "Divieto con eccezione non applicabile alla navetta",
+    "orario_rilevamento": "14:00",
+    "giorno_settimana": "Domenica",
+    "sensori_raw": {
+      "camera_frontale": "ECCETTO FORNITORE DALLE 08:00 ALLE 10:00",
+      "camera_laterale": "ECCETTO FORNITORE 08-10",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 9,
+    "action": "ASK_HUMAN",
+    "confidence": 0.551,
+    "fused_text": "DIVIETO DI TRANSITO ECCETTO AUTORIZZATI",
+    "sign_type": "DIVIETO",
+    "exceptions": [
+      "AUTORIZZATI"
+    ],
+    "reason": "Eccezione per autorizzati — verifica se la navetta è autorizzata",
+    "orario_rilevamento": "07:30",
+    "giorno_settimana": "Mercoledì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI TRANSITO ECCETTO AUTORIZZATI",
+      "camera_laterale": "DIVIETO TRANSITO ECCETTO AUTORIZZATI",
+      "V2I_receiver": null
+    }
+  },
+  {
+    "id_scenario": 73,
+    "action": "GO",
+    "confidence": 0.819,
+    "fused_text": "DIVIETO DI ACCESSO ECCETTO BUS TAXI",
+    "sign_type": "DIVIETO",
+    "exceptions": [
+      "BUS",
+      "TAXI"
+    ],
+    "reason": "Eccezione per TAXI, BUS — la navetta può transitare",
+    "orario_rilevamento": "07:45",
+    "giorno_settimana": "Lunedì",
+    "sensori_raw": {
+      "camera_frontale": "DIVIETO DI ACCESSO ECCETTO BUS E TAXI",
+      "camera_laterale": "DIVIETO ECCETTO BUS TAXI",
+      "V2I_receiver": "BUS TAXI OK"
+    }
+  }
+]
