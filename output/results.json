@@ -1128,8 +1128,8 @@
   {
     "id_scenario": 95,
     "action": "GO",
-    "confidence": 0.888,
-    "fused_text": "STRADA SDISSESTATA LIMITE KM/H",
+    "confidence": 0.852,
+    "fused_text": "STRADA DISSESTATA LIMITE KM/H",
     "sign_type": "INFO",
     "exceptions": [],
     "reason": "Segnale informativo — nessun divieto di transito",
@@ -1219,7 +1219,7 @@
       "BUS",
       "TAXI"
     ],
-    "reason": "Eccezione per BUS, TAXI — la navetta può transitare",
+    "reason": "Eccezione per TAXI, BUS — la navetta può transitare",
     "orario_rilevamento": "07:45",
     "giorno_settimana": "Lunedì",
     "sensori_raw": {
