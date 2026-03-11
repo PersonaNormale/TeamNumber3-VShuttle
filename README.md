@@ -55,20 +55,18 @@ Membri e Ruoli:
 
 Dalla root del repository:
 
-(First Run Only)
+```bash
+make run
+```
+
+Questo comando installa le dipendenze e avvia backend e frontend insieme tramite `run_fullstack.sh`.
+
+In caso di problemi con l'installazione delle dipendenze o l'ambiente virtuale python:
 
 ```bash
 make install-backend
 make install-frontend 
 ```
-
-Con tutte le dipendenze risolte:
-
-```bash
-make run
-```
-
-Questo comando avvia backend e frontend insieme tramite `run_fullstack.sh`.
 
 ### Porte di default
 
