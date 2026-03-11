@@ -51,41 +51,6 @@ Membri e Ruoli:
 
 ---
 
-## Screenshot dashboard
-
-
-[Dashboard - simulazione in esecuzione](./docs/screenshots/start.png)
-[Dashboard - richiesta conferma umana](./docs/screenshots/decision_1.png)
-[Dashboard - go](./docs/screenshots/go_2.png)
-[Dashboard - stop](./docs/screenshots/stop_2.png)
-[Dashboard - go](./docs/screenshots/go_1.png)
-[Dashboard - stop](./docs/screenshots/stop_1.png)
-
-
----
-
-## Architettura (overview)
-
-```mermaid
-flowchart LR
-    A[Dataset JSON scenari] --> B[Backend FastAPI]
-    B --> C[Fusione sensori + parsing semantico]
-    C --> D[Decisione GO/STOP/HUMAN_REVIEW]
-    D --> E[Stato simulazione in memoria]
-    E --> F[Frontend React Dashboard]
-    F -->|CONFIRM/OVERRIDE| B
-```
-
-### Componenti principali
-
-- **Backend**: FastAPI + pipeline deterministica (`engine/`) per fusione e decisione.
-- **Frontend**: React + Vite con polling `/api/simulations/{id}/state` ogni 500ms.
-- **Controllo temporale**:
-  - avanzamento automatico scenario ogni **4s**,
-  - timeout intervento umano a **2s** con fallback automatico su `STOP`.
-
----
-
 ## Setup rapido
 
 Dalla root del repository:
@@ -115,6 +80,41 @@ Questo comando avvia backend e frontend insieme tramite `run_fullstack.sh`.
 ```bash
 BACKEND_PORT=9000 FRONTEND_PORT=5174 make run
 ```
+
+---
+
+## Screenshot dashboard
+
+
+![Dashboard - simulazione in esecuzione](./docs/screenshots/start.png)
+![Dashboard - richiesta conferma umana](./docs/screenshots/decision_1.png)
+![Dashboard - go](./docs/screenshots/go_2.png)
+![Dashboard - stop](./docs/screenshots/stop_2.png)
+![Dashboard - go](./docs/screenshots/go_1.png)
+![Dashboard - stop](./docs/screenshots/stop_1.png)
+
+
+---
+
+## Architettura (overview)
+
+```mermaid
+flowchart LR
+    A[Dataset JSON scenari] --> B[Backend FastAPI]
+    B --> C[Fusione sensori + parsing semantico]
+    C --> D[Decisione GO/STOP/HUMAN_REVIEW]
+    D --> E[Stato simulazione in memoria]
+    E --> F[Frontend React Dashboard]
+    F -->|CONFIRM/OVERRIDE| B
+```
+
+### Componenti principali
+
+- **Backend**: FastAPI + pipeline deterministica (`engine/`) per fusione e decisione.
+- **Frontend**: React + Vite con polling `/api/simulations/{id}/state` ogni 500ms.
+- **Controllo temporale**:
+  - avanzamento automatico scenario ogni **4s**,
+  - timeout intervento umano a **2s** con fallback automatico su `STOP`.
 
 ---
 
