@@ -206,18 +206,17 @@ def correct_ocr(raw_text: str | None) -> tuple[str, float]:
     n_subs += n_fuzzy
 
     # Step 7 – confidence penalty per substitution
-    '''1.0 — confidenza partenza: se non c'è stata nessuna correzione, il 
-    testo è perfetto → 100%
-    
-    n_subs * 0.06 — ogni sostituzione/correzione applicata (digit→lettera, merge di 
-    frammenti, fuzzy-match) toglie il 6% di confidenza. Più correzioni servono, più 
-    il testo originale era corrotto, meno ci fidiamo del risultato
-    
-    max(0.3, ...) — pavimento al 30%. Anche se ci sono 20 sostituzioni,
-    non scendiamo mai sotto 0.3. Serve per evitare che la confidenza vada a zero
-     o negativa, perché il testo, anche molto corrotto, potrebbe essere ancora
-     corretto dopo le correzioni'''
-    ocr_confidence = max(0.3, 1.0 - n_subs * 0.06)
+
+    '''
+    Baseline: 1.0 (lettura zero-mutation).
+
+    Decadimento: -0.15 per ogni mutazione
+                 (proxy dell'edit distance: digit->letter, merge, fuzzy-match).
+
+    Lower bound: 0.0. Garantisce il collasso deterministico della confidenza per
+                      input ad alta entropia, forzando il fallback logico di sicurezza a valle.
+    '''
+    ocr_confidence = max(0.0, 1.0 - (n_subs * 0.15))
 
     return text, ocr_confidence
 

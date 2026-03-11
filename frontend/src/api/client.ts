@@ -52,6 +52,12 @@ export const apiClient = {
     return request<SimulationState>(`/simulations/${simulationId}/state`);
   },
 
+  stopSimulation(simulationId: string): Promise<SimulationState> {
+    return request<SimulationState>(`/simulations/${simulationId}/stop`, {
+      method: "POST"
+    });
+  },
+
   sendHumanDecision(
     simulationId: string,
     decision: HumanDecision
